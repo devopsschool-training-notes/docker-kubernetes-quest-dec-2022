@@ -1,0 +1,162 @@
+What is Docker?
+----------------------
+		Container mgmt tool
+		Release
+			Community
+			Enterprise
+		Written in Go
+		Version - 20.x
+		by Soloman
+
+TOOL
+	- Save time
+				1 Day -> 5 mins --> 1 Sec
+	- Reduce Cost
+		1 APP -- 3 APP -- 10 APP
+				
+	- Imp* Quality of work
+
+mgmt
+		create + start + stop + restart + pause + unpa + kill + remove
+
+What is Container?
+	
+
+FILESYSTEM
+==============================
+BOOT FILESTEM 	=== Kernel (LINUX)
+ROOT FILESTEM	=== UBUNTU - CENTOS  - RHEL - FEODRA - WIN19 - WIN20 = BASE IMAGE
+USER FILESTEM	
+APP FILESTEM	
+
+=======================================================
+
+Architecture of Docker
+
+HUMAN --> Docker Client -> API --> Docker Server(DockerD) -> ContainerD -> Kernel
+			==============================================
+								Docker Engine
+
+
+Components of Docker
+=============================
+Docker Engine
+==========================
+
+Docker Images
+==========================
+
+VM Images --> 
+BOOT FILESTEM + ROOT FILESTEM + USER FILESTEM + APP FILESTEM
+Linux				ubuntu				root				ls
+Linux				ubuntu				apache				java 		tomcat		jenkins
+
+
+Docker Images
+ROOT FILESTEM + USER FILESTEM + APP FILESTEM
+ubuntu				root				ls
+centos				user				java 		tomcat		jenkins
+
+
+- One copy of docker image - Mounted inside each container
+
+Docker Registry
+==========================
+			Repository
+					version of FILESTEMS 
+							ROOT FILESTEM + USER FILESTEM + APP FILESTEM
+							ubuntu				root				ls
+							centos				user				java 		tomcat		jenkins
+
+			hub.dcoker
+			gr
+
+Docker Container
+==========================
+
+RUN a Image --- you get a container
+RUN a Image 10 times --- you get a 10 container
+
+
+HUMAN --> Docker Client -> API --> Docker Server(DockerD) -> ContainerD -> Kernel
+
+docker run httpd
+
+									- Check image in local		-->
+																		1 PID TREE
+																		1 NET NS
+																		1 MNT == 1 COPY OF IMAGE
+																		1 USER
+									- 	TO ATTACH THAT PID+NET+MNT to X USER == Container
+
+
+
+
+
+
+create + start + stop + restart + pause + unpa + kill + remove
+
+
+What is Docker?
+What is Container
+How Docker work?
+How Container work?
+What are the components of Docker?
+===================================================
+
+Step 1 - Install Docker			DONE
+
+Step 2 - Basic Docker Commands
+ 15  docker version
+   19  docker info
+   21  docker images
+   22  docker ps
+   23  docker ps -a
+   24  history
+   26  which docker
+   27  which dockerd
+   28  which containerd
+   29  ps -eaf | grep dockerd
+   30  ps -eaf | grep containerd
+
+
+Step 3 - Working with Container Lifecycle
+create + start + stop + restart + pause + unpa + kill + remove
+- https://www.devopsschool.com/blog/lifecycle-of-docker-containers/
+
+
+Step 4 - How to access Container
+
+Step 5 - Troubleshooting Container
+
+SERVER 1 = 34.203.248.229
+SERVER 2 = 54.227.71.110
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
