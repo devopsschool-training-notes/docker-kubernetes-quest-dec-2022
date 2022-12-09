@@ -124,6 +124,64 @@ Step 3 - Working with Container Lifecycle
 create + start + stop + restart + pause + unpa + kill + remove
 - https://www.devopsschool.com/blog/lifecycle-of-docker-containers/
 
+33  docker images
+   34  docker pull httpd
+   35  clear
+   36  docker images
+   37  docker create --name raj1 httpd
+   38  docker ps -a
+   39  docker create raj1 httpd
+   40  docker create httpd
+   41  docker ps -a
+   42  docker create --name raj1 httpd
+   43  docker create --name raj2 httpd
+   44  clear
+   45  docker ps -a
+   46  docker start 10e8ab1b5eba
+   47  docker start raj
+   48  docker start raj1
+   49  docker ps -a
+   50  docker stop raj2
+   51  docker ps -a
+   52  docker restart raj1
+   53  clear
+   54  docker ps -a
+   55  docker pause raj2
+   56  docker pause raj1
+   57  docker ps -a
+   58  docker start raj2
+   59  clear
+   60  docker start raj2
+   61  docker ps -a
+   62  docker stats
+   63  clear
+   64  ls
+   65  docker stats
+   66  docker ps -a
+   67  docker inspect 10e8ab1b5eba | grep -i ip
+   68  gitbash
+   69  start .
+   70  clear
+   71  docker inspect 10e8ab1b5eba | grep -i ip
+   72  docker ps -a
+   73  docker inspect raj1 | grep -i ip
+   74  clear
+   75  docker stats
+   76  docker ps -a
+   77  docker unpause 11146a0f4e32
+   78  docker ps -a
+   79  docker kill raj1
+   80  docker ps -a
+   81  docker kill raj2
+   82  docker ps -a
+   83  docker start raj2
+   84  docker stop raj2
+   85  docker ps -a
+   86  docker rm raj2
+   87  docker rm raj1
+   88  docker ps -a
+   89  history
+
 
 Step 4 - How to access Container
 
