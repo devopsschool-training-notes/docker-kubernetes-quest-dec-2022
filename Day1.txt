@@ -277,11 +277,19 @@ docker exec -it a28694e5c3c6 /bin/bash
 
 
 - Access from outside - http
+===================================================
+
+  140  docker inspect 44f119a11c9d\
+  141  docker inspect 44f119a11c9d
+  142  curl http://172.17.0.15
+  143  clear
+  144  docker run -d httpd
+  145  docker run -d -p 8080:80 httpd
+  146  docker run -d -p 8081:80 httpd
 
 
 
-
-
+https://www.devopsschool.com/blog/the-docker-command-line-complete-referenece/
 
 
 
