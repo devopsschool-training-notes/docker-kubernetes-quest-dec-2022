@@ -218,6 +218,74 @@ Antony Jose
 Sebin Babu
 Saikrishna S B
 
+==================================================
+==================================================
+PS					VS						Container
+--------------------------------------------------
+PID1 is running		PID1 is running			PID1 is running
+SYSTEMD				SYSTEMD					ANYTHING
+
+docker run
+=========================================================================
+Docker create + Docker Start + Docker attach(Attached to a PID1 of the container)
+
+docker run -d
+=========================================================================
+Docker create + Docker Start + Docker DO NOT attach(DeAttached to a PID1 of the container)
+
+
+How to Access Container?
+--------------------------------------
+- Go inside 	- Bash | power
+--- exec - would execute a exectuable inside a container
+==== you can go inside a container using /bin/bash and -it 
+
+docker exec -it a28694e5c3c6 /bin/bash
+
+
+ 107  docker run httpd
+  108  docker ps -a
+  109  clear
+  110  ls
+  111  clear
+  112  docker run -d httpd
+  113  docker ps -a
+  114  clear
+  115  id
+  116  ps
+  117  docker ps -a
+  118  clear
+  119  docker ps
+  120  docker exec a28694e5c3c6 ls
+  121  docker exec a28694e5c3c6 df -kh
+  122  docker exec a28694e5c3c6 ps
+  123  clear
+  124  docker ps
+  125  docker exec -it a28694e5c3c6 /bin/bash
+  126  clear
+  127  docker ps
+  128  docker run -it ubuntu /bin/bash
+  129  docker ps -a
+  130  clear
+  131  docker run -itd ubuntu /bin/bash
+  132  docker ps
+  133  docker exec -it b9f901a37f8e /bin/bash
+  134  docker ps
+  135  docker exec  b9f901a37f8e ps -eaf
+  136  docker attach b9f901a37f8e
+
+
+
+- Access from outside - http
+
+
+
+
+
+
+
+
+
 
 
 
