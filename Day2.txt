@@ -189,15 +189,108 @@ VOLUME == Mnt		= POD
   125  kubectl explain pod.spec
   126  kubectl explain pod.spec.containers
 
+===================================================
+ReplicationController
+
+Replication 	- 1 POD to Many
+Controller	- Desire === Actual
+
+
+
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: rajesh-rc
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: scmgalaxy/nginx-devopsschoolv1
+
+
+131  ls
+  132  vi rc.yaml
+  133  kubectl create -f rc.yaml -n=rajesh
+  134  kubectl get rc
+  135  kubectl get rc -n=rajesh
+  136  kubectl get pods -n=rajesh
+  137  kubectl describe rc rajesh-rc -n=rajesh
+  138  clear
+  139  ls
+  140  vi rc.yaml
+  141  kubectl apply -f rc.yaml -n=rajesh
+  142  kubectl get pods -n=rajesh
+  143  kubectl edit rc rajesh-rc -n=rajesh
+  144  kubectl get pods -n=rajesh
+  145  kubectl delete pod rajesh-rc-67v9t rajesh-rc-jh48d -n=rajesh
+  146  kubectl get pods -n=rajesh
+  147  kubectl delete -f rc.yaml -n=rajesh
+  148  kubectl get rc -A
+
+
+
+===================================================
+Deployment
+
+Replication + Controller + Versioning +  Rollout + Rollback
+=======================
+	ReplicaSets
 
 
 
 
 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rajesh-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: scmgalaxy/nginx-devopsschoolv1
+        ports:
+        - containerPort: 80
 
 
+152  vi dep.yaml
+  153  kubectl get deploy
+  154  kubectl get deploy -n=rajesh
+  155  kubectl get rc -n=rajesh
+  156  kubectl create dep.yaml -n=rajesh
+  157  kubectl create -f dep.yaml -n=rajesh
+  158  vi dep.yaml
+  159  kubectl create -f dep.yaml -n=rajesh
+  160  clear
+  161  ls
+  162  vi dep.yaml
+  163  kubectl create -f dep.yaml -n=rajesh
+  164  kubectl get deploy -n=rajesh
+  165  kubectl describe deploy rajesh-deployment -n=rajesh
+  166*
+  167  ls
+  168  kubectl edit deploy rajesh-deployment -n=rajesh
+  169  kubectl get deploy -n=rajesh
+  170  kubectl get pods -n=rajesh
+  171  kubectl delete pod rajesh-deployment-868bbcc976-dw9tn rajesh-deployment-868bbcc976-h9jjt -n=rajesh
+  172  kubectl get pods -n=rajesh
+  173  kubectl get rc -n=rajesh
+  174  kubectl get rs -n=rajesh
 
 
-
-
-
+https://www.devopsschool.com/blog/kubernetes-deployment-strategy-explained-with-example/
