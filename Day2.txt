@@ -1,0 +1,85 @@
+What is Kubernetes?
+==========================
+			Platform
+		
+			Orchestration
+			- Containers
+			- Microservices
+			- Storage
+			- Networking
+				
+			Conainers for Large Deployments
+
+			COMPUTE			=== POD
+			STORAGE			=== PV - PVC
+			NETWORKING		=== Calico
+			SECURITY			=== RBAC
+			LB					=== Service, ingress
+			DNS
+			DB - NS - QUQ - SMTP - 
+
+
+				VMs
+================================
+			AWS  == OpenStake | VmwareSphere
+			Azure
+			GC
+			----
+			COMPUTE
+			STORAGE
+			NETWORKING
+			SECURITY
+			LB
+			DNS
+			DB - NS - QUQ - SMTP - 
+
+
+How kubernetes works!!!!
+
+Master
+54.87.140.252
+ubuntu
+rajesh123
+
+Worker
+54.90.186.32
+
+
+ 35  kubectl get nodes
+   36  ls .kube/
+   37  more .kube/config
+   38  clear
+   39  ls
+   40  kubectl config view
+   41  clear
+   42  kubectl
+   43  clear
+   44  kubectl get pods -A
+   45  clear
+   46  kubectl
+   47  clear
+   48  kubectl version
+   49  kubectl
+   50  clear
+   51  kubectl api-resources
+   52  clear
+   53  kubectl config view
+   54  kubectl
+   55  clear
+   56  kubectl  api-versions
+   57  clear
+   58  kubectl
+   59  clear
+   60  kubectl cluster-info
+   61  history
+
+
+
+
+
+
+
+
+
+
+
