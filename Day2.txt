@@ -73,6 +73,124 @@ Worker
    60  kubectl cluster-info
    61  history
 
+===========================================================
+
+Namespace
+PODS
+ReplicationController
+Deployment
+Service
+==================================================
+API
+	CRUD
+==============================
+	Create
+			CMD
+				create
+			YAML
+				create -f yaml
+	Read
+			CMD
+				get
+				describe
+			YAML
+				get -f yaml
+	Update
+			CMD
+				edit
+			YAML
+				apply -f yaml 
+	Delete
+			CMD
+				delete
+			YAML
+				delete -f yaml
+
+What is Namespace?
+==============================
+
+
+   70  kubectl get ns
+   71  kubectl get pods -n=kube-system
+   72  kubectl get pods
+   73  clear
+   74  kubectl get ns
+   75  kubectl create ns rajesh
+   76  kubectl get ns
+   77  kubectl describe ns rajesh
+   78  kubectl edit ns rajesh
+   79  kubectl describe ns rajesh
+   80  cler
+   81  clear
+   82  kubectl delete ns rajesh
+
+
+What is POD?
+==============================
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodehelloworld.example.com
+  labels:
+    app: helloworld
+spec:
+  containers:
+  - name: devopsschool1
+    image: scmgalaxy/nginx-devopsschoolv1
+    ports:
+    - name: nginx-port
+      containerPort: 80
+
+
+
+
+
+ 95  vi pod.yaml
+   96  kubectl get ns
+   97  kubectl create ns rajesh
+   98  clear
+   99  kubectl get ns
+  100  kubectl create -f pod.yaml -n=rajesh
+  101  kubectl create -f pod.yaml
+  102  kubectl get pods
+  103  kubectl get pods -n=rajesh
+  104  kubectl get pods -n=rajesh -o wide
+  105  kubectl describe pod nodehelloworld.example.com -n=rajesh
+  106  clear
+  107  ls
+  108  vi pod.yaml
+  109  kubectl apply -f pod.yaml
+  110  kubectl apply -f pod.yaml -n=rajesh
+  111  kubectl describe pod nodehelloworld.example.com -n=rajesh
+  112  clear
+  113  ls
+  114  kubectl get pods -n=rajesh -o wide --show-labels
+  115  curl http://192.168.1.2
+  116  clear
+  117  ls
+  118  kubectl delete -f pod.yaml
+  119  kubectl delete -f pod.yaml -n=rajesh
+  120  history
+
+
+
+COMPUTE = Container	= POD
+COMPUTE = Container	= POD
+NETWORK = IP		= POD
+VOLUME == Mnt		= POD
+
+
+
+ 122  kubectl get pods
+  123  kubectl get pods -h
+  124  clear
+  125  kubectl explain pod.spec
+  126  kubectl explain pod.spec.containers
+
+
+
 
 
 
